@@ -30,7 +30,7 @@ const HomePage = ({ countries, setCountries }) => {
           title: "Population",
           description: country.population.toLocaleString(),
         },
-        { title: "Region", description: country.regon },
+        { title: "Region", description: country.region },
         { title: "Capital", description: country.capital },
       ],
     };
