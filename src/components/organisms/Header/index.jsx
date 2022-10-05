@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container } from "../Container";
+import { StyledContainer } from "../../atoms/StyledContainer";
 import { IoMoon, IoMoonOutline } from "react-icons/io5";
 import {
   StyledHeader,
@@ -19,7 +19,7 @@ export const Header = () => {
 
   return (
     <StyledHeader>
-      <Container>
+      <StyledContainer>
         <StyledWrapper>
           <StyledTitle to={'/'}>Where is the world?</StyledTitle>
           <StyledModeSwitcher onClick={toggleTheme}>
@@ -31,7 +31,7 @@ export const Header = () => {
             <span style={{ marginLeft: "0.75rem" }}>{theme} Theme</span>
           </StyledModeSwitcher>
         </StyledWrapper>
-      </Container>
+      </StyledContainer>
     </StyledHeader>
   );
 };

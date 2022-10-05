@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
-import { CustomSelect } from "./CustomSelect";
-import Search from "./Search";
+import { CustomSelect } from "../../molecules/CustomSelect";
+import Search from "../../molecules/Search";
+import { StyledWrapper } from "./styled";
+
 
 const options = [
   { value: "Africa", label: "Africa" },
@@ -11,16 +12,7 @@ const options = [
   { value: "Oceania", label: "Oceania" },
 ];
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  @media (min-width: 767px) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-`;
+
 
 const Controls = ({ onSearch }) => {
   const [search, setSearch] = useState("");
@@ -33,7 +25,7 @@ const Controls = ({ onSearch }) => {
   }, [search, region]);
 
   return (
-    <Wrapper>
+    <StyledWrapper>
       <Search search={search} setSearch={setSearch} />
       <CustomSelect
         options={options}
@@ -43,7 +35,7 @@ const Controls = ({ onSearch }) => {
         value={region}
         onChange={setRegion}
       />
-    </Wrapper>
+    </StyledWrapper>
   );
 };
 

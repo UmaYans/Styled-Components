@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { ALL_COUNTRIES } from "../config";
-import Controls from "../components/Controls";
-import List from "../components/List";
-import Card from "../components/Card";
+import { ALL_COUNTRIES } from "../../config";
+import Controls from "../organisms/Controls";
+import List from "../molecules/List";
+import Card from "../molecules/Card";
 
 const HomePage = ({ countries, setCountries }) => {
   const [filteredCountries, setFilteredCountries] = useState(countries);

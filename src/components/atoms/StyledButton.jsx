@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const StyledButton = styled.button`
   padding: 0 1rem;
   background-color: var(--colors-ui-base);
   box-shadow: var(--shadow);

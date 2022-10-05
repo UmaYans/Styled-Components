@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { IoSearch } from "react-icons/io5";
 
-const InputContainer = styled.label`
+const StyledInputContainer = styled.label`
   backgorund-color: var(--colors-ui-base);
   padding: 1rem 2rem;
   display: flex;
@@ -18,7 +17,7 @@ const InputContainer = styled.label`
   }
 `;
 
-const Input = styled.input.attrs({
+const StyledInput = styled.input.attrs({
   type: "search",
   placeholder: "Search for a country...",
 })`
@@ -29,17 +28,4 @@ const Input = styled.input.attrs({
   background-color: var(--colors-ui-base);
 `;
 
-const Search = ({ search, setSearch }) => {
-  const changeInput = (e) => {
-    setSearch(e.target.value);
-  };
-
-  return (
-    <InputContainer>
-      <IoSearch />
-      <Input onChange={changeInput} value={search} />
-    </InputContainer>
-  );
-};
-
-export default Search;
+export {StyledInputContainer, StyledInput}

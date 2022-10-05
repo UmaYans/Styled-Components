@@ -2,9 +2,9 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { IoArrowBack } from "react-icons/io5";
-import { searchByCountry } from "../config";
-import { Button } from "../components/Button";
-import { Info } from "../components/Info";
+import { searchByCountry } from "../../config";
+import { StyledButton } from "../atoms/StyledButton";
+import { Info } from "../organisms/Info";
 
 const Details = () => {
   const [country, setCountry] = useState(null);
@@ -19,9 +19,9 @@ const Details = () => {
 
   return (
     <>
-      <Button onClick={() => navigate(-1, { replace: true })}>
+      <StyledButton onClick={() => navigate(-1, { replace: true })}>
         <IoArrowBack /> Back
-      </Button>
+      </StyledButton>
       {country && <Info navigate={navigate} {...country} />}
     </>
   );
